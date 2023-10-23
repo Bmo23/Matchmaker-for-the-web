@@ -1,0 +1,222 @@
+<html>
+	<head> 
+		<title>Matchmaker</title>
+	</head>
+	
+	<body>
+		<body style="background-color: rgb(228, 77, 157);">
+		
+			<h1 style="border: 10px solid White; background-color:Pink;">
+				<center>
+					<font face="Comic Sans MS">
+						<p style="color:black;">
+							! ! ! Welcome to the Matchmaker Website! ! !
+						</p>	
+					</font>
+				</center>
+			</h1>
+			
+		<h2 style="border: 5px solid White; background-color:Pink;">
+			
+			<p>
+				<center>
+					<font size="5">
+						<b>Instructions: This website will determinant if your compatible with a random person.</b>
+						
+					</font>
+				</center>
+			</p>
+			
+			<p>
+				<center>
+					<font size="5">
+						<b>Remember, the higher the score is the better!!!</b>
+					</font>
+				</center>
+			</p>
+			
+			<br>
+			<br>
+			
+			
+			<center><label><b>Q1: Do you like Pink?</b></label></center>
+			<center>
+				<br>
+				<select id="Q1">
+					<option value="5">Super Yes</option>
+					<option value="4">Yes</option>
+					<option value="3">No opinion</option>
+					<option value="2">Nah</option>
+					<option value="1">Absolutely NO WAY!</option>
+				</select>
+			</center>
+			
+			<br>
+			<br>
+			
+			<center><label><b>Q2: Do you like vegetables?</b></label></center>
+			<center>
+				<br>
+				<select id="Q2">
+					<option value="5">Super Yes</option>
+					<option value="4">Yes</option>
+					<option value="3">No opinion</option>
+					<option value="2">Nah</option>
+					<option value="1">Absolutely NO WAY!</option>
+				</select>
+			</center>
+			
+			<br>
+			<br>
+			
+			<center><label><b>Q3: Do you like coding?</b></label></center>
+			<center>
+				<br>
+				<select id="Q3">
+					<option value="5">Super Yes</option>
+					<option value="4">Yes</option>
+					<option value="3">No opinion</option>
+					<option value="2">Nah</option>
+					<option value="1">Absolutely NO WAY!</option>
+				</select>
+			</center>
+			
+			<br>
+			<br>
+			
+			<center><label><b>Q4: Do you like to do outside activities?</b></label></center>
+			<center>
+				<br>
+				<select id="Q4">
+					<option value="5">Super Yes</option>
+					<option value="4">Yes</option>
+					<option value="3">No opinion</option>
+					<option value="2">Nah</option>
+					<option value="1">Absolutely NO WAY!</option>
+				</select>
+			</center>
+			
+			<br>
+			<br>
+			
+			<center><label><b>Q5: Do you like food?</b></label></center>
+				<br>
+			<center>
+				<select id="Q5">
+					<option value="5">Super Yes</option>
+					<option value="4">Yes</option>
+					<option value="3">No opinion</option>
+					<option value="2">Nah</option>
+					<option value="1">Absolutely NO WAY!</option>
+				</select>
+			</center>
+			
+			<br>
+			<br>
+			<br>
+			
+			<center>
+				<button onclick="calcrandomcheck()">Calculate Random Compatibility</button>
+			</center>
+			
+			<br>
+			<br>
+			
+			<center>
+				<p id="checkcompact"></p>
+			
+				<p id="MESSAGE"></p>
+			</center>
+		</h2>
+			
+			
+			
+			<script>
+				console.log("Booting. . .");
+					function calcrandomcheck() {
+							console.log("calcrandomcheck()")
+							
+							const THE_THUMBS = "Are you a keyboard? Cause your just my type."
+							const THE_BAD =  "At least want to be friends?"
+							const WHAT_BEEP = "Welp i hope your not K.O by the next person. . ."
+							
+							const REQUIRED_ANSWER = [
+									5, 
+									4, 
+									3, 
+									2, 
+									1,
+								]
+								
+							const HIGH_SCORE = 25;
+							
+							let qr1 = document.getElementById("Q1").selectedOptions[0].value;
+							let qr2 = document.getElementById("Q2").selectedOptions[0].value;
+							let qr3 = document.getElementById("Q3").selectedOptions[0].value;
+							let qr4 = document.getElementById("Q4").selectedOptions[0].value;
+							let qr5 = document.getElementById("Q5").selectedOptions[0].value;
+							
+							console.log("Q1A:")
+							console.log(document.getElementById("Q1").selectedOptions[0].text);
+							console.log(document.getElementById("Q1").selectedOptions[0].value);
+							console.log(qr1);
+							
+							console.log("Q2A:");
+							console.log(document.getElementById("Q2").selectedOptions[0].text);
+							console.log(document.getElementById("Q2").selectedOptions[0].value);
+							console.log(qr2);
+							
+							console.log("Q3A:");
+							console.log(document.getElementById("Q3").selectedOptions[0].text);
+							console.log(document.getElementById("Q3").selectedOptions[0].value);
+							console.log(qr3);
+							
+							console.log("Q4A:");
+							console.log(document.getElementById("Q4").selectedOptions[0].text);
+							console.log(document.getElementById("Q4").selectedOptions[0].value);
+							console.log(qr4);
+							
+							console.log("Q5A:");
+							console.log(document.getElementById("Q5").selectedOptions[0].text);
+							console.log(document.getElementById("Q5").selectedOptions[0].value);
+							console.log(qr5);
+							
+							let qc1 = 5 - Math.abs(qr1 - REQUIRED_ANSWER[0]);
+							let qc2 = 5 - Math.abs(qr2 - REQUIRED_ANSWER[0]);
+							let qc3 = 5 - Math.abs(qr3 - REQUIRED_ANSWER[0]);
+							let qc4 = 5 - Math.abs(qr4 - REQUIRED_ANSWER[0]);
+							let qc5 = 5 - Math.abs(qr5 - REQUIRED_ANSWER[0]);
+							
+							console.log("a1="+qc1);
+							console.log("a2="+qc2);
+							console.log("a3="+qc3);
+							console.log("a4="+qc4);
+							console.log("a5="+qc5);
+							
+							let totalcompact = qc1 + qc2 + qc3 + qc4 + qc5; 
+							
+							totalcompact *= 100/HIGH_SCORE;
+							totalcompact = Math.round(totalcompact);
+							console.log("tac="+ totalcompact);
+							
+							document.getElementById("checkcompact").innerHTML = "Your random compatibility is: " + totalcompact;
+							
+							console.log("tac="+ totalcompact);
+							
+							if (totalcompact >= 85) {
+								console.log(THE_THUMBS);
+								document.getElementById("MESSAGE").innerHTML = THE_THUMBS;
+							}
+							else if (totalcompact >= 65) {
+								console.log(THE_BAD);
+								document.getElementById("MESSAGE").innerHTML = THE_BAD;
+							}
+							else {
+								console.log(WHAT_BEEP);
+								document.getElementById("MESSAGE").innerHTML = WHAT_BEEP;
+							}
+						}
+			</script>
+	</body>
+</html>
+
